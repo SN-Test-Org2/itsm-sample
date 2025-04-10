@@ -1,0 +1,115 @@
+{
+  "metadata": [
+    "CustomField",
+    "CustomObject",
+    "ValidationRule"
+  ],
+  "objectsList": {
+    "Account": {
+      "fields": [
+        {
+          "name": "Id",
+          "type": "id"
+        },
+        {
+          "name": "Name",
+          "type": "string"
+        },
+        {
+          "name": "Industry",
+          "type": "picklist",
+          "unique": false,
+          "picklistValues": [
+            {
+              "label": "Technology",
+              "value": "Technology"
+            },
+            {
+              "label": "Finance",
+              "value": "Finance"
+            },
+            {
+              "label": "Healthcare",
+              "value": "Healthcare"
+            },
+            {
+              "label": "Education",
+              "value": "Education",
+              "active": true,
+              "defaultValue": false,
+              "validFor": null
+            }
+          ]
+        }
+      ],
+      "relatedObjects": [],
+      "duplicateCheck": [],
+      "recordIds": [],
+      "formats": [],
+      "filters": [],
+      "numRecords": 10
+    },
+    "Contact": {
+      "fields": [
+        {
+          "name": "Id",
+          "type": "id"
+        },
+        {
+          "name": "AccountId",
+          "label": "Account Id",
+          "type": "id"
+        },
+        {
+          "name": "FirstName",
+          "type": "string"
+        },
+        {
+          "name": "LastName",
+          "type": "string"
+        },
+        {
+          "name": "Title",
+          "type": "picklist",
+          "unique": false,
+          "length": 40,
+          "nameField": false,
+          "nillable": true,
+          "picklistValues": [
+            {
+              "label": "Manager",
+              "value": "Manager"
+            },
+            {
+              "label": "Director",
+              "value": "Director"
+            },
+            {
+              "label": "VP",
+              "value": "VP"
+            },
+            {
+              "label": "C-Level",
+              "value": "C-Level"
+            },
+            {
+              "label": "Intern",
+              "value": "Intern"
+            }
+          ]
+        }
+      ],
+      "relatedObjects": [
+        {
+          "name": "Account",
+          "referenceField": "AccountId"
+        }
+      ],
+      "duplicateCheck": [],
+      "recordIds": [],
+      "formats": [],
+      "filters": [],
+      "numRecords": 15
+    }
+  }
+}
